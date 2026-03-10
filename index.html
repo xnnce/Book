@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نظام المكتبة المدرسية</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script defer src="script.js"></script>
+</head>
+<body>
+
+<!-- القائمة الجانبية -->
+<aside id="sidebar">
+    <div class="logo">
+        <h1><i class="fas fa-book-open"></i> مكتبة المدرسة</h1>
+    </div>
+    <div id="subjects-list"></div>
+</aside>
+
+<!-- المحتوى الرئيسي -->
+<main>
+    <header>
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="ابحث عن كتاب أو مؤلف...">
+            <i class="fas fa-search"></i>
+        </div>
+        <span id="current-subject-title">الكل</span>
+    </header>
+
+    <!-- لوحة إضافة الكتب -->
+    <div id="admin-panel">
+        <h2>إضافة كتاب / ملزمة</h2>
+        <form id="add-book-form">
+            <input type="text" id="book-title" placeholder="اسم الكتاب" required>
+            <select id="book-subject"></select>
+            <input type="text" id="book-author" placeholder="اسم المؤلف">
+            <input type="file" id="dropzone-file" accept=".pdf,.doc,.docx">
+            <button type="submit">نشر الكتاب</button>
+        </form>
+    </div>
+
+    <!-- عرض الكتب -->
+    <div id="books-container"></div>
+    <div id="no-results" class="hidden">لا توجد كتب أو ملازم في هذا القسم حالياً.</div>
+</main>
+
+</body>
+</html>

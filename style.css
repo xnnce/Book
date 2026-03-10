@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap');
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    margin: 0;
+    background: #050b14;
+    color: #e2e8f0;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* القائمة الجانبية */
+#sidebar {
+    width: 280px;
+    background: #0a192f;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+#sidebar .logo h1 {
+    text-align: center;
+    color: #3b82f6;
+    margin-bottom: 20px;
+}
+#subjects-list button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: none;
+    border-radius: 10px;
+    background: #0a192f;
+    color: #cbd5f5;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#subjects-list button:hover {
+    background: #112240;
+    color: white;
+    box-shadow: 0 0 10px #3b82f6;
+}
+
+/* المحتوى الرئيسي */
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* البحث */
+.search-box {
+    position: relative;
+    margin-bottom: 10px;
+}
+.search-box input {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    border-radius: 8px;
+    border: 1px solid #1e3a8a;
+    background: #0a192f;
+    color: #e2e8f0;
+}
+.search-box i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #3b82f6;
+}
+
+/* لوحة الإضافة */
+#admin-panel {
+    background: #0a192f;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+#admin-panel input, #admin-panel select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #1e3a8a;
+    background: #112240;
+    color: #e2e8f0;
+}
+
+/* الكتب */
+#books-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    gap: 15px;
+}
+.book-card {
+    background: #0a192f;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+}
+.book-card:hover {
+    box-shadow: 0 0 15px #3b82f6;
+}
+.book-card h3 {
+    margin: 10px 0 5px;
+    color: white;
+}
+.book-card p {
+    color: #3b82f6;
+    margin: 0 0 10px;
+}
+.book-card button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 8px;
+    background: #1e3a8a;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.book-card button:hover {
+    background: #2563eb;
+}
+
+.hidden { display: none; }
+
+/* متجاوب */
+@media(max-width:768px){
+    body { flex-direction: column; }
+    #sidebar { width: 100%; display: flex; flex-direction: row; overflow-x: auto; padding: 5px;}
+    #subjects-list button { margin-right: 5px; margin-bottom:0;}
+    main { padding: 10px; }
+}
